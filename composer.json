@@ -1,13 +1,14 @@
 {
-    "name": "infocontact/ic-fwk",
+    "name": "infocontact/framework",
     "description": "Un Framework PHP développé pour le bureau des étudiants de l'IUT Informatique d'Amiens",
-	"version": "0.1.0-dev",
-	"type": "library",
-	"keywords": ["php", "library", "framework"],
-	"homepage": "http://infocontact.github.io/ic-fwk",
-	"time": "2014-07-19",
-	"licence": "WTFPL2",
+    "version": "0.1.0-dev",
+    "type": "library",
+    "keywords": ["framework"],
+    "homepage": "http://infocontact.github.io/ic-fwk",
+    "time": "2014-07-19",
+    "licence": "WTFPL2",
     "require": {
+        "php": ">=5.4.0",
         "smarty/smarty": "v3.1.18",
         "propel/propel": "2.0.0-alpha3"
     },
@@ -20,27 +21,36 @@
         {
             "name": "Maxime BAUMANN",
             "email": "maxslayer44@gmail.com",
-			"homepage": "http://www.maxime-baumann.fr/",
-			"role": "Developer"
+            "homepage": "http://www.maxime-baumann.fr/",
+            "role": "Developer"
         },
-		{
-			"name": "Info Contact",
-			"email": "contact@info.iut-amiens.fr",
-			"homepage": "http://www.myinfocontact.fr/",
-			"role": "Developer"
-		}
+        {
+            "name": "Info Contact",
+            "email": "contact@info.iut-amiens.fr",
+            "homepage": "http://www.myinfocontact.fr/"
+        }
     ],
-	"support": {
-		"email": "contact@info.iut-amiens.fr",
-		"issues": "https://github.com/InfoContact/ic-fwk/issues",
-		"wiki": "https://github.com/InfoContact/ic-fwk/wiki",
-		"source": "https://github.com/InfoContact/ic-fwk"
+    "support": {
+        "email": "contact@info.iut-amiens.fr",
+        "issues": "https://github.com/InfoContact/ic-fwk/issues",
+        "wiki": "https://github.com/InfoContact/ic-fwk/wiki",
+        "source": "https://github.com/InfoContact/ic-fwk"
     },
-	"repositories": [
+    "repositories": [
         {
             "type": "vcs",
             "url": "https://github.com/InfoContact/ic-fwk"
         }
-	],
+    ],
+    "autoload": {
+        "psr-4": {
+            "InfoContact\\Framework\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "InfoContact\\Framework\\Tests\\": "tests/"
+        }
+    }
     "minimum-stability": "dev"
 }
