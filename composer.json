@@ -44,13 +44,9 @@
     ],
     "autoload": {
         "psr-4": {
-            "InfoContact\\Framework\\": "src/"
-        }
+            "InfoContact\\": "src/"
+        },
+        "files": ["src/Framework/functions.php"]
     },
-    "autoload-dev": {
-        "psr-4": {
-            "InfoContact\\Framework\\Tests\\": "tests/"
-        }
-    }
     "minimum-stability": "dev"
 }
