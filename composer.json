@@ -9,11 +9,11 @@
     "licence": "WTFPL2",
     "require": {
         "php": ">=5.4.0",
-        "smarty/smarty": "v3.1.18",
+        "smarty/smarty": "v3.1.19",
         "propel/propel": "2.0.0-alpha3"
     },
     "require-dev": {
-        "phpunit/phpunit": "4.1.4",
+        "phpunit/phpunit": "4.3.1",
         "phpmd/phpmd": "2.0.0",
         "squizlabs/php_codesniffer": "1.5.3"
     },
@@ -44,9 +44,9 @@
     ],
     "autoload": {
         "psr-4": {
-            "InfoContact\\": "src/"
+            "InfoContact\\IcFwk": "src/"
         },
-        "files": ["src/Framework/functions.php"]
+        "files": ["src/IcFwk/functions.php"]
     },
     "minimum-stability": "dev"
 }
