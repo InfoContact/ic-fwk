@@ -14,13 +14,13 @@ class Router {
     }
     
     public function getRoute($url) {
-        /**
-         * @var \InfoContact\IcFwk\Route $route
-         */
         foreach ($this->routes as $route) {
             if(($varsValues = $route->match($url)) !== false) {
-                
+                $route->setVars($varsValues);
+                return $route;
             }
         }
+        throw new \RuntimeException('Aucune route ne correspond à l\'URL', self::NO_ROUTE);
     }
+    
 }

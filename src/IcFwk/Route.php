@@ -135,14 +135,17 @@ class Route {
      * @throws \RuntimeException
      */
     public function setVars(array $vars) {
-        if(is_array($vars)) {
-            if(empty($this->vars)) {
-                $this->vars = $vars;
-            } else {
-                throw new \RuntimeException("Les variables de route sont déjà initialisées");
+        if(is_array($vars) && empty($this->vars)) {
+            if($this->hasVars()) {
+                foreach ($vars as $key => $match) {
+                    // La première valeur contient entièrement la chaine capturée (voir la doc sur preg_match).
+                    if ($key !== 0) {
+                        $this->vars[$this->varsNames[$key - 1]] = $match;
+                    }
+                }
             }
         } else {
-            throw new \RuntimeException("Les variables de route doit être une chaîne de caractères");
+            throw new \RuntimeException("Conflit sur les variables de route");
         }
     }
 
