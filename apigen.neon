@@ -1,0 +1,35 @@
+destination: ./doc
+source:
+	- src/IcFwk
+	
+extensions:
+	- php
+	
+exclude:
+	- */tests/*
+	- */vendor/*
+	- *Factory.php*
+	
+charset:
+	- UTF-8
+	
+title: IcFwk API
+groups: auto
+autocomplete:
+	- classes
+	- constants
+	- functions
+	- methods
+	- properties
+	- classconstants
+	
+accessLevels:
+	- public
+	- protected
+	- private
+	
+php: true
+tree: true
+deprecated: false
+todo: false
+download: false

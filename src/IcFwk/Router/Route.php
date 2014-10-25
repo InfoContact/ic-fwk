@@ -1,7 +1,7 @@
 <?php
 
-namespace InfoContact\IcFwk;
-
+namespace InfoContact\IcFwk\Router
+;
 
 class Route {
 
@@ -168,6 +168,19 @@ class Route {
         } else {
             return false;
         }
+    }
+    
+    public function generateUrl($params = []) {
+        $url = $this->url;
+        if($this->hasVars()) {
+            $matches = [];
+            \preg_match_all('/\((.*?)?\)/', $url, $matches);
+            foreach ($this->varsNames as $k => $v) {
+                str_replace_first($matches[0][$k], $params[$v], $url);
+            }
+        }
+        $url = \str_replace("\\", "", $url);
+        return $url;
     }
 
 }
