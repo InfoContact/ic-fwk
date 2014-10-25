@@ -7,7 +7,7 @@ php:
 
 before_script:
   - composer install
-  - composer dump-autuloader -o
+  - composer dump-autoloader -o
 
 script:
   - phpunit --configuration "tests/configuration.xml" "tests/"
