@@ -5,9 +5,18 @@ php:
   - 5.5
   - 5.6
 
+env:
+  global:
+    secure: DYg9Wpqu9ML17D7nZAvGOitdCY+zCn+cYgI2Qu/dDb+LvNkwf7rh8Cazm0ffWCyDMb3/wx+9/pHtEPqtohHRK/dzg+H76VWp65a7llsCoUZ4ZBeVtK88XuNOUfAyev4MbseDVEPgjBEy+Et2+dQ2Tz24yXHAP4dUzmd2VivzdIU=
+
+
 before_script:
+  - curl -sS http://apigen.org/installer | php
   - composer install
   - composer dump-autoload -o
 
 script:
   - phpunit --configuration "tests/configuration.xml" "tests/"
+
+after_success:
+  - .utility/push-to-gh-pages.sh
