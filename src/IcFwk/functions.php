@@ -4,6 +4,7 @@ namespace InfoContact\IcFwk;
 
 /**
  * Remplace le premier pattern rencontré.
+ * @link http://infocontact.github.io/ic-fwk/doc/function-InfoContact.IcFwk.str_replace_first.html
  * @param string $search <p>Le terme recherché</p>
  * @param string $replace <p>Le terme de remplacement</p>
  * @param string $subject <p>La châine de recherche</p>
