@@ -124,7 +124,7 @@
 		<b>Namespace:</b> InfoContact\IcFwk\Library<br>
 		
 
-		<b>Located at</b> <a href="source-class-InfoContact.IcFwk.Library.Collection.html#5-121" title="Go to source code">Library/Collection.php</a><br>
+		<b>Located at</b> <a href="source-class-InfoContact.IcFwk.Library.Collection.html#5-123" title="Go to source code">Library/Collection.php</a><br>
 	</div>
 
 
@@ -181,20 +181,33 @@
 
 		<td class="name"><div>
 		<a class="anchor" href="#_get">#</a>
-		<code><a href="source-class-InfoContact.IcFwk.Library.Collection.html#23-37" title="Go to source code">get</a>( <span>string <var>$key</var></span> )</code>
+		<code><a href="source-class-InfoContact.IcFwk.Library.Collection.html#23-39" title="Go to source code">get</a>( <span>string <var>$key</var></span> )</code>
 
 		<div class="description short">
 			<p>Récupère la valeur pour une clé $key</p>
+
+<p>
+La méthode est chaînable, on peut accèder aux sous clé par chainage ou en une seule fois.
+Ex :<br>
+<pre>&lt;code&gt;
+<span class="php-var">$maCollection</span>-&gt;get(<span class="php-quote">&quot;key&quot;</span>)-&gt;(<span class="php-quote">&quot;subkey&quot;</span>);
+<span class="php-var">$maCollection</span>-&gt;get(<span class="php-quote">&quot;key.subkey&quot;</span>);
+&lt;/code&gt;</pre>
+</p>
 
 		</div>
 
 		<div class="description detailed hidden">
 			<p>Récupère la valeur pour une clé $key</p>
 
-<p>La méthode est chaînable, on peut accèder aux sous clé par chainage ou en une seule fois.
-Ex :
-$maCollection->get("key")->("subkey");
-$maCollection->get("key.subkey");</p>
+<p>
+La méthode est chaînable, on peut accèder aux sous clé par chainage ou en une seule fois.
+Ex :<br>
+<pre>&lt;code&gt;
+<span class="php-var">$maCollection</span>-&gt;get(<span class="php-quote">&quot;key&quot;</span>)-&gt;(<span class="php-quote">&quot;subkey&quot;</span>);
+<span class="php-var">$maCollection</span>-&gt;get(<span class="php-quote">&quot;key.subkey&quot;</span>);
+&lt;/code&gt;</pre>
+</p>
 
 
 
@@ -228,7 +241,7 @@ $maCollection->get("key.subkey");</p>
 
 		<td class="name"><div>
 		<a class="anchor" href="#_getValue">#</a>
-		<code><a href="source-class-InfoContact.IcFwk.Library.Collection.html#39-58" title="Go to source code">getValue</a>( <span>array <var>$indexes</var></span>, <span>array <var>$value</var></span> )</code>
+		<code><a href="source-class-InfoContact.IcFwk.Library.Collection.html#41-60" title="Go to source code">getValue</a>( <span>array <var>$indexes</var></span>, <span>array <var>$value</var></span> )</code>
 
 		<div class="description short">
 			<p>Permet de récupérer la valeur de manière récursive via chainabilité</p>
@@ -274,7 +287,7 @@ $maCollection->get("key.subkey");</p>
 
 		<td class="name"><div>
 		<a class="anchor" href="#_set">#</a>
-		<code><a href="source-class-InfoContact.IcFwk.Library.Collection.html#60-67" title="Go to source code">set</a>( <span>string <var>$key</var></span>, <span>mixed <var>$value</var></span> )</code>
+		<code><a href="source-class-InfoContact.IcFwk.Library.Collection.html#62-69" title="Go to source code">set</a>( <span>string <var>$key</var></span>, <span>mixed <var>$value</var></span> )</code>
 
 		<div class="description short">
 			
@@ -315,7 +328,7 @@ $maCollection->get("key.subkey");</p>
 
 		<td class="name"><div>
 		<a class="anchor" href="#_has">#</a>
-		<code><a href="source-class-InfoContact.IcFwk.Library.Collection.html#69-71" title="Go to source code">has</a>( <span>mixed <var>$key</var></span> )</code>
+		<code><a href="source-class-InfoContact.IcFwk.Library.Collection.html#71-73" title="Go to source code">has</a>( <span>mixed <var>$key</var></span> )</code>
 
 		<div class="description short">
 			
@@ -347,7 +360,7 @@ $maCollection->get("key.subkey");</p>
 
 		<td class="name"><div>
 		<a class="anchor" href="#_lists">#</a>
-		<code><a href="source-class-InfoContact.IcFwk.Library.Collection.html#73-79" title="Go to source code">lists</a>( <span>mixed <var>$key</var></span>, <span>mixed <var>$value</var></span> )</code>
+		<code><a href="source-class-InfoContact.IcFwk.Library.Collection.html#75-81" title="Go to source code">lists</a>( <span>mixed <var>$key</var></span>, <span>mixed <var>$value</var></span> )</code>
 
 		<div class="description short">
 			
@@ -379,7 +392,7 @@ $maCollection->get("key.subkey");</p>
 
 		<td class="name"><div>
 		<a class="anchor" href="#_extract">#</a>
-		<code><a href="source-class-InfoContact.IcFwk.Library.Collection.html#81-87" title="Go to source code">extract</a>( <span>mixed <var>$key</var></span> )</code>
+		<code><a href="source-class-InfoContact.IcFwk.Library.Collection.html#83-89" title="Go to source code">extract</a>( <span>mixed <var>$key</var></span> )</code>
 
 		<div class="description short">
 			
@@ -411,7 +424,7 @@ $maCollection->get("key.subkey");</p>
 
 		<td class="name"><div>
 		<a class="anchor" href="#_join">#</a>
-		<code><a href="source-class-InfoContact.IcFwk.Library.Collection.html#89-91" title="Go to source code">join</a>( <span>mixed <var>$glue</var></span> )</code>
+		<code><a href="source-class-InfoContact.IcFwk.Library.Collection.html#91-93" title="Go to source code">join</a>( <span>mixed <var>$glue</var></span> )</code>
 
 		<div class="description short">
 			
@@ -443,7 +456,7 @@ $maCollection->get("key.subkey");</p>
 
 		<td class="name"><div>
 		<a class="anchor" href="#_max">#</a>
-		<code><a href="source-class-InfoContact.IcFwk.Library.Collection.html#93-98" title="Go to source code">max</a>( <span>mixed <var>$key</var> = <span class="php-keyword1">false</span></span> )</code>
+		<code><a href="source-class-InfoContact.IcFwk.Library.Collection.html#95-100" title="Go to source code">max</a>( <span>mixed <var>$key</var> = <span class="php-keyword1">false</span></span> )</code>
 
 		<div class="description short">
 			
@@ -475,7 +488,7 @@ $maCollection->get("key.subkey");</p>
 
 		<td class="name"><div>
 		<a class="anchor" href="#_offsetExists">#</a>
-		<code><a href="source-class-InfoContact.IcFwk.Library.Collection.html#100-102" title="Go to source code">offsetExists</a>( <span>mixed <var>$offset</var></span> )</code>
+		<code><a href="source-class-InfoContact.IcFwk.Library.Collection.html#102-104" title="Go to source code">offsetExists</a>( <span>mixed <var>$offset</var></span> )</code>
 
 		<div class="description short">
 			
@@ -509,7 +522,7 @@ $maCollection->get("key.subkey");</p>
 
 		<td class="name"><div>
 		<a class="anchor" href="#_offsetGet">#</a>
-		<code><a href="source-class-InfoContact.IcFwk.Library.Collection.html#104-106" title="Go to source code">offsetGet</a>( <span>mixed <var>$offset</var></span> )</code>
+		<code><a href="source-class-InfoContact.IcFwk.Library.Collection.html#106-108" title="Go to source code">offsetGet</a>( <span>mixed <var>$offset</var></span> )</code>
 
 		<div class="description short">
 			
@@ -543,7 +556,7 @@ $maCollection->get("key.subkey");</p>
 
 		<td class="name"><div>
 		<a class="anchor" href="#_offsetSet">#</a>
-		<code><a href="source-class-InfoContact.IcFwk.Library.Collection.html#108-110" title="Go to source code">offsetSet</a>( <span>mixed <var>$offset</var></span>, <span>mixed <var>$value</var></span> )</code>
+		<code><a href="source-class-InfoContact.IcFwk.Library.Collection.html#110-112" title="Go to source code">offsetSet</a>( <span>mixed <var>$offset</var></span>, <span>mixed <var>$value</var></span> )</code>
 
 		<div class="description short">
 			
@@ -577,7 +590,7 @@ $maCollection->get("key.subkey");</p>
 
 		<td class="name"><div>
 		<a class="anchor" href="#_offsetUnset">#</a>
-		<code><a href="source-class-InfoContact.IcFwk.Library.Collection.html#112-116" title="Go to source code">offsetUnset</a>( <span>mixed <var>$offset</var></span> )</code>
+		<code><a href="source-class-InfoContact.IcFwk.Library.Collection.html#114-118" title="Go to source code">offsetUnset</a>( <span>mixed <var>$offset</var></span> )</code>
 
 		<div class="description short">
 			
@@ -611,7 +624,7 @@ $maCollection->get("key.subkey");</p>
 
 		<td class="name"><div>
 		<a class="anchor" href="#_getIterator">#</a>
-		<code><a href="source-class-InfoContact.IcFwk.Library.Collection.html#117-119" title="Go to source code">getIterator</a>( )</code>
+		<code><a href="source-class-InfoContact.IcFwk.Library.Collection.html#119-121" title="Go to source code">getIterator</a>( )</code>
 
 		<div class="description short">
 			
