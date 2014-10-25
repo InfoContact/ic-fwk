@@ -57,9 +57,9 @@ class CollectionTest extends \PHPUnit_Framework_TestCase {
 
     /**
      * @covers InfoContact\IcFwk\Library\Collection::has
-     * @depends testSet
      */
     public function testHas() {
+        $this->object->set("key4", 19);
         $this->assertEquals(true, $this->object->has("key4"));
         $this->assertEquals(false, $this->object->has("key5"));
     }
