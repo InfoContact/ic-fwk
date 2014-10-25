@@ -189,10 +189,8 @@
 <p>
 La méthode est chaînable, on peut accèder aux sous clé par chainage ou en une seule fois.
 Ex :<br>
-<pre>&lt;code&gt;
-<span class="php-var">$maCollection</span>-&gt;get(<span class="php-quote">&quot;key&quot;</span>)-&gt;(<span class="php-quote">&quot;subkey&quot;</span>);
-<span class="php-var">$maCollection</span>-&gt;get(<span class="php-quote">&quot;key.subkey&quot;</span>);
-&lt;/code&gt;</pre>
+<pre><span class="php-var">$maCollection</span>-&gt;get(<span class="php-quote">&quot;key&quot;</span>)-&gt;(<span class="php-quote">&quot;subkey&quot;</span>);
+<span class="php-var">$maCollection</span>-&gt;get(<span class="php-quote">&quot;key.subkey&quot;</span>);</pre>
 </p>
 
 		</div>
@@ -203,10 +201,8 @@ Ex :<br>
 <p>
 La méthode est chaînable, on peut accèder aux sous clé par chainage ou en une seule fois.
 Ex :<br>
-<pre>&lt;code&gt;
-<span class="php-var">$maCollection</span>-&gt;get(<span class="php-quote">&quot;key&quot;</span>)-&gt;(<span class="php-quote">&quot;subkey&quot;</span>);
-<span class="php-var">$maCollection</span>-&gt;get(<span class="php-quote">&quot;key.subkey&quot;</span>);
-&lt;/code&gt;</pre>
+<pre><span class="php-var">$maCollection</span>-&gt;get(<span class="php-quote">&quot;key&quot;</span>)-&gt;(<span class="php-quote">&quot;subkey&quot;</span>);
+<span class="php-var">$maCollection</span>-&gt;get(<span class="php-quote">&quot;key.subkey&quot;</span>);</pre>
 </p>
 
 
@@ -214,13 +210,14 @@ Ex :<br>
 				<h4>Parameters</h4>
 				<div class="list"><dl>
 					<dt><var>$key</var></dt>
-					<dd>
+					<dd>Clé dont on veut récupérer la valeur
 </dd>
 				</dl></div>
 
 				<h4>Returns</h4>
 				<div class="list">
-					<code>mixed</code>
+					<code>mixed</code><br>Valeur de la clé (null si n'existe pas)
+
 				</div>
 
 
