@@ -9,14 +9,25 @@ namespace InfoContact\IcFwk\Library;
  */
 class Collection implements \IteratorAggregate, \ArrayAccess {
 
+    /** @var array $items Tableau de données */
     private $items;
 
+    /**
+     * Permet la création de la collection
+     * @param array $items Tableau de données
+     */
     public function __construct(array $items) {
         $this->items = $items;
     }
     
     /**
      * Récupère la valeur pour une clé $key
+     * 
+     * La méthode est chaînable, on peut accèder aux sous clé par chainage ou en une seule fois.
+     * Ex :
+     * $maCollection->get("key")->("subkey");
+     * $maCollection->get("key.subkey");
+     * 
      * @param string $key
      * @return mixed
      */
@@ -26,10 +37,10 @@ class Collection implements \IteratorAggregate, \ArrayAccess {
     }
 
     /**
-     * 
-     * @param array $indexes
-     * @param array $value
-     * @return mixed
+     * Permet de récupérer la valeur de manière récursive via chainabilité
+     * @param array $indexes Tableau des clés successives
+     * @param array $value Tableau de recherche
+     * @return mixed Valeur de la clé (null si n'existe pas)
      */
     private function getValue(array $indexes, $value) {
         $key = array_shift($indexes);
@@ -46,6 +57,11 @@ class Collection implements \IteratorAggregate, \ArrayAccess {
         return $this->getValue($indexes, $value[$key]);
     }
 
+    /**
+     * 
+     * @param string $key
+     * @param mixed $value
+     */
     public function set($key, $value) {
         $this->items[$key] = $value;
     }

@@ -1,11 +1,13 @@
 <?php
 
+namespace InfoContact\IcFwk;
+
 /**
- * Replace the first matched pattern.
- * @param string $search
- * @param string $replace
- * @param string $subject
- * @return string
+ * Remplace le premier pattern rencontré.
+ * @param string $search <p>Le terme recherché</p>
+ * @param string $replace <p>Le terme de remplacement</p>
+ * @param string $subject <p>La châine de recherche</p>
+ * @return string <p>La chaine avec le terme remplacé</p>
  */
 function str_replace_first($search, $replace, $subject) {
     $pos = strpos($subject, $search);
