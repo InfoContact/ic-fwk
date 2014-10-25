@@ -11,6 +11,10 @@ class CollectionTest extends \PHPUnit_Framework_TestCase {
      * @var Collection
      */
     protected $object;
+    /**
+     * @var Collection
+     */
+    protected $other;
 
     /**
      * Sets up the fixture, for example, opens a network connection.
@@ -18,65 +22,58 @@ class CollectionTest extends \PHPUnit_Framework_TestCase {
      */
     protected function setUp() {
         $this->object = new Collection([
-            "key1" => "value1",
-            "key2" => "value2",
+            "key1" => 10,
+            "key2" => 15,
             "key3" => [
                 "subkey1" => "subvalue1",
                 "subkey2" => "subvalue2"
             ]
         ]);
-    }
-
-    /**
-     * Tears down the fixture, for example, closes a network connection.
-     * This method is called after a test is executed.
-     */
-    protected function tearDown() {
-        
+        $this->other = new Collection([
+            "john" => ["name" => "rambo", "mark" => 19],
+            "bruce" => ["name" => "willis", "mark" => 12],
+            "chuck" => ["name" => "norris", "mark" => 13]
+        ]);
     }
 
     /**
      * @covers InfoContact\IcFwk\Library\Collection::get
-     * @todo   Implement testGet().
      */
     public function testGet() {
-        $this->assertEquals("value1", $this->object->get("key1"));
-        $this->assertEquals("value2", $this->object->get("key2"));
+        $this->assertEquals(10, $this->object->get("key1"));
+        $this->assertEquals(15, $this->object->get("key2"));
         $this->assertEquals(new Collection(["subkey1" => "subvalue1","subkey2" => "subvalue2"]), $this->object->get("key3"));
         $this->assertEquals("subvalue2", $this->object->get("key3.subkey2"));
     }
 
     /**
      * @covers InfoContact\IcFwk\Library\Collection::set
-     * @todo   Implement testSet().
      */
     public function testSet() {
-        // Remove the following lines when you implement this test.
-        $this->markTestIncomplete(
-                'This test has not been implemented yet.'
-        );
+        $this->assertEquals(null, $this->object->get("key4"));
+        $this->object->set("key4", 19);
+        $this->assertEquals(19, $this->object->get("key4"));
     }
 
     /**
      * @covers InfoContact\IcFwk\Library\Collection::has
-     * @todo   Implement testHas().
+     * @depends testSet
      */
     public function testHas() {
-        // Remove the following lines when you implement this test.
-        $this->markTestIncomplete(
-                'This test has not been implemented yet.'
-        );
+        $this->assertEquals(true, $this->object->has("key4"));
+        $this->assertEquals(false, $this->object->has("key5"));
     }
 
     /**
      * @covers InfoContact\IcFwk\Library\Collection::lists
-     * @todo   Implement testLists().
      */
     public function testLists() {
-        // Remove the following lines when you implement this test.
-        $this->markTestIncomplete(
-                'This test has not been implemented yet.'
-        );
+        $result = new Collection([
+            "rambo" => 19,
+            "willis" => 12,
+            "norris" => 13
+        ]);
+        $this->assertEquals($result, $this->other->lists("name", "mark"));
     }
 
     /**
