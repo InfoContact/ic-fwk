@@ -22,12 +22,14 @@ class Collection implements \IteratorAggregate, \ArrayAccess {
     
     /**
      * Récupère la valeur pour une clé $key
-     * 
+     * <p>
      * La méthode est chaînable, on peut accèder aux sous clé par chainage ou en une seule fois.
-     * Ex :
+     * Ex :<br>
+     * <pre><code>
      * $maCollection->get("key")->("subkey");
      * $maCollection->get("key.subkey");
-     * 
+     * </code></pre>
+     * </p>
      * @param string $key
      * @return mixed
      */
