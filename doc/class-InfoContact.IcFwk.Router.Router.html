@@ -27,8 +27,6 @@
 				<li class="active"><a href="namespace-InfoContact.IcFwk.Router.html">Router</a>
 						</li>
 							</ul></li></ul></li>
-				<li><a href="namespace-None.html">None</a>
-						</li>
 				<li><a href="namespace-PHP.html">PHP</a>
 						</li>
 			</ul>
@@ -114,7 +112,7 @@
 		<b>Namespace:</b> InfoContact\IcFwk\Router<br>
 		
 
-		<b>Located at</b> <a href="source-class-InfoContact.IcFwk.Router.Router.html#5-53" title="Go to source code">Router/Router.php</a><br>
+		<b>Located at</b> <a href="source-class-InfoContact.IcFwk.Router.Router.html#5-56" title="Go to source code">Router/Router.php</a><br>
 	</div>
 
 
@@ -124,7 +122,7 @@
 	<tr data-order="addRoute" id="_addRoute">
 
 		<td class="attributes"><code>
-			 public 
+			 public static
 
 			
 			
@@ -133,7 +131,7 @@
 
 		<td class="name"><div>
 		<a class="anchor" href="#_addRoute">#</a>
-		<code><a href="source-class-InfoContact.IcFwk.Router.Router.html#10-19" title="Go to source code">addRoute</a>( <span><code><a href="class-InfoContact.IcFwk.Router.Route.html">InfoContact\IcFwk\Router\Route</a></code> <var>$route</var></span> )</code>
+		<code><a href="source-class-InfoContact.IcFwk.Router.Router.html#11-20" title="Go to source code">addRoute</a>( <span><code><a href="class-InfoContact.IcFwk.Router.Route.html">InfoContact\IcFwk\Router\Route</a></code> <var>$route</var></span> )</code>
 
 		<div class="description short">
 			<p>Ajoute une route dans la liste des routes</p>
@@ -148,7 +146,7 @@
 				<h4>Parameters</h4>
 				<div class="list"><dl>
 					<dt><var>$route</var></dt>
-					<dd>Objet Route
+					<dd>La route à ajouté
 </dd>
 				</dl></div>
 
@@ -162,37 +160,38 @@
 	<tr data-order="getRoute" id="_getRoute">
 
 		<td class="attributes"><code>
-			 public 
+			 public static
 
-			type
+			<code><a href="class-InfoContact.IcFwk.Router.Route.html">InfoContact\IcFwk\Router\Route</a></code>
 			
 			</code>
 		</td>
 
 		<td class="name"><div>
 		<a class="anchor" href="#_getRoute">#</a>
-		<code><a href="source-class-InfoContact.IcFwk.Router.Router.html#21-36" title="Go to source code">getRoute</a>( <span>type <var>$url</var></span> )</code>
+		<code><a href="source-class-InfoContact.IcFwk.Router.Router.html#22-37" title="Go to source code">getRoute</a>( <span>string <var>$url</var></span> )</code>
 
 		<div class="description short">
-			
+			<p>Retourne la route correspondant à l'URL passée en paramètre</p>
 
 		</div>
 
 		<div class="description detailed hidden">
-			
+			<p>Retourne la route correspondant à l'URL passée en paramètre</p>
 
 
 
 				<h4>Parameters</h4>
 				<div class="list"><dl>
 					<dt><var>$url</var></dt>
-					<dd>
+					<dd>L'URL dont on souhaite connaitre la route correspondante
 </dd>
 				</dl></div>
 
 				<h4>Returns</h4>
 				<div class="list">
-					<code>type</code>
+					<code><code><a href="class-InfoContact.IcFwk.Router.Route.html">InfoContact\IcFwk\Router\Route</a></code></code><br>L'ojet route correspondant
+
 				</div>
 
 				<h4>Throws</h4>
@@ -208,42 +207,47 @@
 	<tr data-order="generate" id="_generate">
 
 		<td class="attributes"><code>
-			 public 
+			 public static
 
-			type
+			string
 			
 			</code>
 		</td>
 
 		<td class="name"><div>
 		<a class="anchor" href="#_generate">#</a>
-		<code><a href="source-class-InfoContact.IcFwk.Router.Router.html#38-51" title="Go to source code">generate</a>( <span>type <var>$name</var></span>, <span>type <var>$params</var> = []</span> )</code>
+		<code><a href="source-class-InfoContact.IcFwk.Router.Router.html#39-54" title="Go to source code">generate</a>( <span>string <var>$name</var></span>, <span>array <var>$params</var> = []</span> )</code>
 
 		<div class="description short">
-			
+			<p>Génère l'URL de la route dont les nom et les paramètres sont transmis</p>
 
 		</div>
 
 		<div class="description detailed hidden">
-			
+			<p>Génère l'URL de la route dont les nom et les paramètres sont transmis</p>
 
 
 
 				<h4>Parameters</h4>
 				<div class="list"><dl>
 					<dt><var>$name</var></dt>
-					<dd>
+					<dd>Nom de la route
 </dd>
 					<dt><var>$params</var></dt>
-					<dd>
+					<dd>Paramètre de la route
 </dd>
 				</dl></div>
 
 				<h4>Returns</h4>
 				<div class="list">
-					<code>type</code>
+					<code>string</code><br>URL générée
+
 				</div>
 
+				<h4>Throws</h4>
+				<div class="list">
+					<code><a href="class-RuntimeException.html">RuntimeException</a></code>
+				</div>
 
 
 
@@ -266,7 +270,7 @@
 		<td class="attributes"><code>integer</code></td>
 		<td class="name">
 			<code>
-				<a href="source-class-InfoContact.IcFwk.Router.Router.html#8" title="Go to source code"><b>NO_ROUTE</b></a>
+				<a href="source-class-InfoContact.IcFwk.Router.Router.html#9" title="Go to source code"><b>NO_ROUTE</b></a>
 			</code>
 
 			<div class="description short">
@@ -296,20 +300,20 @@
 	<caption>Properties summary</caption>
 	<tr data-order="routes" id="$routes">
 		<td class="attributes"><code>
-			private  
+			private static 
 			array
 		</code></td>
 
 		<td class="name">
-				<a href="source-class-InfoContact.IcFwk.Router.Router.html#7" title="Go to source code"><var>$routes</var></a>
+				<a href="source-class-InfoContact.IcFwk.Router.Router.html#7-8" title="Go to source code"><var>$routes</var></a>
 
 			<div class="description short">
-				
+				<p>$routes Liste des routes de l'application</p>
 
 			</div>
 
 			<div class="description detailed hidden">
-				
+				<p>$routes Liste des routes de l'application</p>
 
 
 			</div>
@@ -336,6 +340,6 @@
 </div>
 </div>
 <script src="resources/combined.js?721046668"></script>
-<script src="elementlist.js?1965322806"></script>
+<script src="elementlist.js?1633978208"></script>
 </body>
 </html>

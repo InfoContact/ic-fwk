@@ -27,8 +27,6 @@
 				<li><a href="namespace-InfoContact.IcFwk.Router.html">Router</a>
 						</li>
 							</ul></li></ul></li>
-				<li><a href="namespace-None.html">None</a>
-						</li>
 				<li><a href="namespace-PHP.html">PHP</a>
 						</li>
 			</ul>
@@ -126,7 +124,7 @@
 		<b>Namespace:</b> InfoContact\IcFwk\Library<br>
 		
 
-		<b>Located at</b> <a href="source-class-InfoContact.IcFwk.Library.Collection.html#5-105" title="Go to source code">Library/Collection.php</a><br>
+		<b>Located at</b> <a href="source-class-InfoContact.IcFwk.Library.Collection.html#5-121" title="Go to source code">Library/Collection.php</a><br>
 	</div>
 
 
@@ -145,18 +143,24 @@
 
 		<td class="name"><div>
 		<a class="anchor" href="#___construct">#</a>
-		<code><a href="source-class-InfoContact.IcFwk.Library.Collection.html#14-16" title="Go to source code">__construct</a>( <span>array <var>$items</var></span> )</code>
+		<code><a href="source-class-InfoContact.IcFwk.Library.Collection.html#15-21" title="Go to source code">__construct</a>( <span>array <var>$items</var></span> )</code>
 
 		<div class="description short">
-			
+			<p>Permet la création de la collection</p>
 
 		</div>
 
 		<div class="description detailed hidden">
-			
+			<p>Permet la création de la collection</p>
 
 
 
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$items</var></dt>
+					<dd>Tableau de données
+</dd>
+				</dl></div>
 
 
 
@@ -177,7 +181,7 @@
 
 		<td class="name"><div>
 		<a class="anchor" href="#_get">#</a>
-		<code><a href="source-class-InfoContact.IcFwk.Library.Collection.html#18-26" title="Go to source code">get</a>( <span>string <var>$key</var></span> )</code>
+		<code><a href="source-class-InfoContact.IcFwk.Library.Collection.html#23-37" title="Go to source code">get</a>( <span>string <var>$key</var></span> )</code>
 
 		<div class="description short">
 			<p>Récupère la valeur pour une clé $key</p>
@@ -186,6 +190,11 @@
 
 		<div class="description detailed hidden">
 			<p>Récupère la valeur pour une clé $key</p>
+
+<p>La méthode est chaînable, on peut accèder aux sous clé par chainage ou en une seule fois.
+Ex :
+$maCollection->get("key")->("subkey");
+$maCollection->get("key.subkey");</p>
 
 
 
@@ -219,31 +228,32 @@
 
 		<td class="name"><div>
 		<a class="anchor" href="#_getValue">#</a>
-		<code><a href="source-class-InfoContact.IcFwk.Library.Collection.html#28-47" title="Go to source code">getValue</a>( <span>array <var>$indexes</var></span>, <span>array <var>$value</var></span> )</code>
+		<code><a href="source-class-InfoContact.IcFwk.Library.Collection.html#39-58" title="Go to source code">getValue</a>( <span>array <var>$indexes</var></span>, <span>array <var>$value</var></span> )</code>
 
 		<div class="description short">
-			
+			<p>Permet de récupérer la valeur de manière récursive via chainabilité</p>
 
 		</div>
 
 		<div class="description detailed hidden">
-			
+			<p>Permet de récupérer la valeur de manière récursive via chainabilité</p>
 
 
 
 				<h4>Parameters</h4>
 				<div class="list"><dl>
 					<dt><var>$indexes</var></dt>
-					<dd>
+					<dd>Tableau des clés successives
 </dd>
 					<dt><var>$value</var></dt>
-					<dd>
+					<dd>Tableau de recherche
 </dd>
 				</dl></div>
 
 				<h4>Returns</h4>
 				<div class="list">
-					<code>mixed</code>
+					<code>mixed</code><br>Valeur de la clé (null si n'existe pas)
+
 				</div>
 
 
@@ -264,7 +274,7 @@
 
 		<td class="name"><div>
 		<a class="anchor" href="#_set">#</a>
-		<code><a href="source-class-InfoContact.IcFwk.Library.Collection.html#49-51" title="Go to source code">set</a>( <span>mixed <var>$key</var></span>, <span>mixed <var>$value</var></span> )</code>
+		<code><a href="source-class-InfoContact.IcFwk.Library.Collection.html#60-67" title="Go to source code">set</a>( <span>string <var>$key</var></span>, <span>mixed <var>$value</var></span> )</code>
 
 		<div class="description short">
 			
@@ -276,6 +286,15 @@
 
 
 
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$key</var></dt>
+					<dd>
+</dd>
+					<dt><var>$value</var></dt>
+					<dd>
+</dd>
+				</dl></div>
 
 
 
@@ -296,7 +315,7 @@
 
 		<td class="name"><div>
 		<a class="anchor" href="#_has">#</a>
-		<code><a href="source-class-InfoContact.IcFwk.Library.Collection.html#53-55" title="Go to source code">has</a>( <span>mixed <var>$key</var></span> )</code>
+		<code><a href="source-class-InfoContact.IcFwk.Library.Collection.html#69-71" title="Go to source code">has</a>( <span>mixed <var>$key</var></span> )</code>
 
 		<div class="description short">
 			
@@ -328,7 +347,7 @@
 
 		<td class="name"><div>
 		<a class="anchor" href="#_lists">#</a>
-		<code><a href="source-class-InfoContact.IcFwk.Library.Collection.html#57-63" title="Go to source code">lists</a>( <span>mixed <var>$key</var></span>, <span>mixed <var>$value</var></span> )</code>
+		<code><a href="source-class-InfoContact.IcFwk.Library.Collection.html#73-79" title="Go to source code">lists</a>( <span>mixed <var>$key</var></span>, <span>mixed <var>$value</var></span> )</code>
 
 		<div class="description short">
 			
@@ -360,7 +379,7 @@
 
 		<td class="name"><div>
 		<a class="anchor" href="#_extract">#</a>
-		<code><a href="source-class-InfoContact.IcFwk.Library.Collection.html#65-71" title="Go to source code">extract</a>( <span>mixed <var>$key</var></span> )</code>
+		<code><a href="source-class-InfoContact.IcFwk.Library.Collection.html#81-87" title="Go to source code">extract</a>( <span>mixed <var>$key</var></span> )</code>
 
 		<div class="description short">
 			
@@ -392,7 +411,7 @@
 
 		<td class="name"><div>
 		<a class="anchor" href="#_join">#</a>
-		<code><a href="source-class-InfoContact.IcFwk.Library.Collection.html#73-75" title="Go to source code">join</a>( <span>mixed <var>$glue</var></span> )</code>
+		<code><a href="source-class-InfoContact.IcFwk.Library.Collection.html#89-91" title="Go to source code">join</a>( <span>mixed <var>$glue</var></span> )</code>
 
 		<div class="description short">
 			
@@ -424,7 +443,7 @@
 
 		<td class="name"><div>
 		<a class="anchor" href="#_max">#</a>
-		<code><a href="source-class-InfoContact.IcFwk.Library.Collection.html#77-82" title="Go to source code">max</a>( <span>mixed <var>$key</var> = <span class="php-keyword1">false</span></span> )</code>
+		<code><a href="source-class-InfoContact.IcFwk.Library.Collection.html#93-98" title="Go to source code">max</a>( <span>mixed <var>$key</var> = <span class="php-keyword1">false</span></span> )</code>
 
 		<div class="description short">
 			
@@ -456,7 +475,7 @@
 
 		<td class="name"><div>
 		<a class="anchor" href="#_offsetExists">#</a>
-		<code><a href="source-class-InfoContact.IcFwk.Library.Collection.html#84-86" title="Go to source code">offsetExists</a>( <span>mixed <var>$offset</var></span> )</code>
+		<code><a href="source-class-InfoContact.IcFwk.Library.Collection.html#100-102" title="Go to source code">offsetExists</a>( <span>mixed <var>$offset</var></span> )</code>
 
 		<div class="description short">
 			
@@ -490,7 +509,7 @@
 
 		<td class="name"><div>
 		<a class="anchor" href="#_offsetGet">#</a>
-		<code><a href="source-class-InfoContact.IcFwk.Library.Collection.html#88-90" title="Go to source code">offsetGet</a>( <span>mixed <var>$offset</var></span> )</code>
+		<code><a href="source-class-InfoContact.IcFwk.Library.Collection.html#104-106" title="Go to source code">offsetGet</a>( <span>mixed <var>$offset</var></span> )</code>
 
 		<div class="description short">
 			
@@ -524,7 +543,7 @@
 
 		<td class="name"><div>
 		<a class="anchor" href="#_offsetSet">#</a>
-		<code><a href="source-class-InfoContact.IcFwk.Library.Collection.html#92-94" title="Go to source code">offsetSet</a>( <span>mixed <var>$offset</var></span>, <span>mixed <var>$value</var></span> )</code>
+		<code><a href="source-class-InfoContact.IcFwk.Library.Collection.html#108-110" title="Go to source code">offsetSet</a>( <span>mixed <var>$offset</var></span>, <span>mixed <var>$value</var></span> )</code>
 
 		<div class="description short">
 			
@@ -558,7 +577,7 @@
 
 		<td class="name"><div>
 		<a class="anchor" href="#_offsetUnset">#</a>
-		<code><a href="source-class-InfoContact.IcFwk.Library.Collection.html#96-100" title="Go to source code">offsetUnset</a>( <span>mixed <var>$offset</var></span> )</code>
+		<code><a href="source-class-InfoContact.IcFwk.Library.Collection.html#112-116" title="Go to source code">offsetUnset</a>( <span>mixed <var>$offset</var></span> )</code>
 
 		<div class="description short">
 			
@@ -592,7 +611,7 @@
 
 		<td class="name"><div>
 		<a class="anchor" href="#_getIterator">#</a>
-		<code><a href="source-class-InfoContact.IcFwk.Library.Collection.html#101-103" title="Go to source code">getIterator</a>( )</code>
+		<code><a href="source-class-InfoContact.IcFwk.Library.Collection.html#117-119" title="Go to source code">getIterator</a>( )</code>
 
 		<div class="description short">
 			
@@ -632,19 +651,19 @@
 	<tr data-order="items" id="$items">
 		<td class="attributes"><code>
 			private  
-			mixed
+			array
 		</code></td>
 
 		<td class="name">
-				<a href="source-class-InfoContact.IcFwk.Library.Collection.html#12" title="Go to source code"><var>$items</var></a>
+				<a href="source-class-InfoContact.IcFwk.Library.Collection.html#12-13" title="Go to source code"><var>$items</var></a>
 
 			<div class="description short">
-				
+				<p>$items Tableau de données</p>
 
 			</div>
 
 			<div class="description detailed hidden">
-				
+				<p>$items Tableau de données</p>
 
 
 			</div>
@@ -671,6 +690,6 @@
 </div>
 </div>
 <script src="resources/combined.js?721046668"></script>
-<script src="elementlist.js?1965322806"></script>
+<script src="elementlist.js?1633978208"></script>
 </body>
 </html>
