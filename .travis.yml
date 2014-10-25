@@ -19,4 +19,4 @@ script:
   - phpunit --configuration "tests/configuration.xml" "tests/"
 
 after_success:
-  - ./.utility/push-to-gh-pages.sh
+  - ./utility/push-to-gh-pages.sh
