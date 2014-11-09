@@ -68,10 +68,21 @@ class Collection implements \IteratorAggregate, \ArrayAccess {
         $this->items[$key] = $value;
     }
 
+    /**
+     * 
+     * @param string $key
+     * @return bool 
+     */
     public function has($key) {
         return array_key_exists($key, $this->items);
     }
 
+    /**
+     * 
+     * @param string $key
+     * @param string $value
+     * @return \InfoContact\IcFwk\Library\Collection
+     */
     public function lists($key, $value) {
         $results = [];
         foreach ($this->items as $item) {
@@ -80,6 +91,11 @@ class Collection implements \IteratorAggregate, \ArrayAccess {
         return new \InfoContact\IcFwk\Library\Collection($results);
     }
 
+    /**
+     * 
+     * @param string $key
+     * @return \InfoContact\IcFwk\Library\Collection
+     */
     public function extract($key) {
         $results = [];
         foreach ($this->items as $item) {
@@ -88,10 +104,20 @@ class Collection implements \IteratorAggregate, \ArrayAccess {
         return new \InfoContact\IcFwk\Library\Collection($results);
     }
 
+    /**
+     * 
+     * @param string $glue
+     * @return string
+     */
     public function join($glue) {
         return implode($glue, $this->items);
     }
 
+    /**
+     * 
+     * @param false|string $key
+     * @return int
+     */
     public function max($key = false) {
         if($key) {
             return $this->extract($key)->max();
@@ -99,23 +125,47 @@ class Collection implements \IteratorAggregate, \ArrayAccess {
         return max($this->items);
     }
 
+    /**
+     * 
+     * @param type $offset
+     * @return type
+     */
     public function offsetExists($offset) {
         return $this->has($offset);
     }
 
+    /**
+     * 
+     * @param type $offset
+     * @return type
+     */
     public function offsetGet($offset) {
         return $this->get($offset);
     }
 
+    /**
+     * 
+     * @param type $offset
+     * @param type $value
+     */
     public function offsetSet($offset, $value) {
         $this->set($offset, $value);
     }
 
+    /**
+     * 
+     * @param type $offset
+     */
     public function offsetUnset($offset) {
         if($this->has($offset)) {
             unset($this->items[$offset]);
         }
     }
+    
+    /**
+     * 
+     * @return \ArrayIterator
+     */
     public function getIterator() {
         return new \ArrayIterator($this->items);
     }
